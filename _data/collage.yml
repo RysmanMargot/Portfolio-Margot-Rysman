@@ -1,15 +1,15 @@
 images:
-  - src: /assets/images/photo1.png
+  - src: /_assets/images/photo1.png
     alt: "Photo 1"
-  - src: /assets/images/photo2.png
+  - src: /_assets/images/photo2.png
     alt: "Photo 2"
-  - src: /assets/images/photo3.png
+  - src: /_assets/images/photo3.png
     alt: "Photo 3"
-    - src: /assets/images/photo4.png
+    - src: /_assets/images/photo4.png
     alt: "Photo 4"
-    - src: /assets/images/photo5.png
+    - src: /_assets/images/photo5.png
     alt: "Photo 5"
-    - src: /assets/images/photo6.jpg
+    - src: /_assets/images/photo6.jpg
     alt: "Photo 6"
-    - src: /assets/images/photo7.jpeg
+    - src: /_assets/images/photo7.jpeg
     alt: "Photo 7"

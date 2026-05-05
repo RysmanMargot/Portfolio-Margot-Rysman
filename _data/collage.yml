@@ -1,15 +1,15 @@
 images:
 - src: /_assets/images/photo1.png
-alt: "Photo 1"
+  alt: "Photo 1"
 - src: /_assets/images/photo2.png
-alt: "Photo 2"
+  alt: "Photo 2"
 - src: /_assets/images/photo3.png
-alt: "Photo 3"
+  alt: "Photo 3"
 - src: /_assets/images/photo4.png
-alt: "Photo 4"
+  alt: "Photo 4"
 - src: /_assets/images/photo5.png
-alt: "Photo 5"
+  alt: "Photo 5"
 - src: /_assets/images/photo6.jpg
-alt: "Photo 6"
+  alt: "Photo 6"
 - src: /_assets/images/photo7.jpeg
-alt: "Photo 7"
+  alt: "Photo 7"

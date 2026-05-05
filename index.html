@@ -10,5 +10,14 @@ layout: default
   <body>
     <h1>Welcome to my portfolio</h1>
     <p>Site under construction.</p>
+
+    <div class="collage">
+      {% for image in site.data.collage.images %}
+        <div class="collage-item">
+          <img src="{{ image.src }}" alt="{{ image.alt }}">
+        </div>
+      {% endfor %
+    </div>
+    
   </body>
 </html>

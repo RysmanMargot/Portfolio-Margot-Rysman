@@ -1,3 +1,5 @@
+---
 layout: page
-title: "Fotografie"
-permalink: /Fotografie
+title: "Photography"
+permalink: /Photography
+---

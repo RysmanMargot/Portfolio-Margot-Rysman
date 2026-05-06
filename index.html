@@ -11,11 +11,19 @@ layout: default
     <h1>Welcome to my portfolio</h1>
     <p>Site under construction.</p>
     
-    <picture>
+    <!--<picture>
         <source srcset="images/Collage.png" media="(max-width: 400px)">
          <source srcset="images/Collage.png">
         <img src="images/Collage.png" alt="Collage">
-    </picture>
+    </picture> -->
+    <div class="collage">
+      {% for image in site.data.collage.images %}
+        <div class="collage-item">
+          <img src="{{ image.src }}" alt="{{ image.alt }}">
+        </div>
+      {% endfor %}
+    </div>
+    
 <br>
 <br>
 <h2>Categories</h2>
@@ -24,13 +32,7 @@ layout: default
   2. <a style="color:Black;" href="https://rysmanmargot.github.io/Portfolio-Margot-Rysman/Rendering"><b>Rendering</b></a> <br>
   3. <a style="color:Black;" href="https://rysmanmargot.github.io/Portfolio-Margot-Rysman/Systems_thinking"><b>Systems thinking</b></a>
     
-    <!--<div class="collage">
-      {% for image in site.data.collage.images %}
-        <div class="collage-item">
-          <img src="{{ image.src }}" alt="{{ image.alt }}">
-        </div>
-      {% endfor %}
-    </div> -->
+    
     
   </body>
 </html>

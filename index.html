@@ -10,16 +10,27 @@ layout: default
   <body>
     <h1>Welcome to my portfolio</h1>
     <p>Site under construction.</p>
-
-  <a href="https://rysmanmargot.github.io/Portfolio-Margot-Rysman/Photography">Photography</a>
     
-    <div class="collage">
+    <picture>
+        <source srcset="_assets/images/collage.png" media="(max-width: 400px)">
+         <source srcset="_assets/images/collage.png">
+        <img src="_assets/images/collage.png" alt="Collage">
+    </picture>
+<br>
+<br>
+<h2>Categories</h2>
+
+  1. <a style="color:Black;" href="https://rysmanmargot.github.io/Portfolio-Margot-Rysman/Photography"><b>Photography</b></a> <br>
+  2. <a style="color:Black;" href="https://rysmanmargot.github.io/Portfolio-Margot-Rysman/Rendering"><b>Rendering</b></a> <br>
+  3. <a style="color:Black;" href="https://rysmanmargot.github.io/Portfolio-Margot-Rysman/Systems_thinking"><b>Systems thinking</b></a>
+    
+    <!--<div class="collage">
       {% for image in site.data.collage.images %}
         <div class="collage-item">
           <img src="{{ image.src }}" alt="{{ image.alt }}">
         </div>
       {% endfor %}
-    </div>
+    </div> -->
     
   </body>
 </html>

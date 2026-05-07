@@ -4,19 +4,49 @@ title: "Photography"
 permalink: /Photography
 ---
 
-    <h1>Photography</h1>
+<h1>Photography</h1>
 
-    <div class="image-info-container">
+<div class="slideshow-container">
 
-        <a href="https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/auto/1.JPG">
-    <img src="images/fotografie/auto/1.JPG" alt="Car1">
-       </a>     
-  <div class="info-bar">
-    After school workshop for car photography and lighting on 05/03/2025.
+  <button class="nav-button prev">❮</button>
+
+  <div class="image-info-container">
+
+    <a id="slideshow-link" href="https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/auto/1.JPG">
+      <img id="slideshow-image" src="/images/fotografie/auto/1.JPG" alt="Car1">
+    </a>
+
+    <div class="info-bar" id="slideshow-info">
+      After school workshop for car photography and lighting on 05/03/2025.
+    </div>
+
   </div>
+
+  <button class="nav-button next">❯</button>
+
 </div>
 
 <style>
+.slideshow-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-button {
+  background: #eee;
+  border: none;
+  padding: 10px 14px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+.nav-button:hover {
+  background: #ddd;
+}
+
 .image-info-container {
   position: relative;
   display: inline-block;
@@ -36,19 +66,65 @@ permalink: /Photography
   top: 50%;
   left: 100%;
   transform: translateY(-50%);
-  background: rgba(240, 240, 240, 0.85); /* lighter grey */
-  color: #333;                           /* softer text */
+  background: rgba(240, 240, 240, 0.85);
+  color: #333;
   padding: 10px 15px;
   border-radius: 6px;
   opacity: 0;
   transition: opacity 0.25s ease;
-  width: 200px;                          /* allows wrapping */
-  line-height: 1.3;                      /* nicer vertical spacing */
+  width: 200px;
+  line-height: 1.3;
 }
 
 .image-info-container:hover .info-bar {
   opacity: 1;
 }
 </style>
-    
 
+<script>
+const slides = [
+  {
+    src: "/images/fotografie/auto/1.JPG",
+    link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/auto/1.JPG",
+    info: "After school workshop for car photography and lighting on 05/03/2025."
+  },
+  {
+    src: "/images/fotografie/auto/2.JPG",
+    link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/auto/2.JPG",
+    info: "After school workshop for car photography and lighting on 05/03/2025"
+  },
+  {
+    src: "/images/fotografie/auto/3.JPG",
+    link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/auto/3.JPG",
+    info: "After school workshop for car photography and lighting on 05/03/2025"
+  },
+    {
+    src: "/images/fotografie/auto/4.JPG",
+    link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/auto/4.JPG",
+    info: "After school workshop for car photography and lighting on 05/03/2025"
+  },
+    {
+    src: "/images/fotografie/auto/5.JPG",
+    link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/auto/5.JPG",
+    info: "After school workshop for car photography and lighting on 05/03/2025"
+  }
+];
+
+let index = 0;
+
+function updateSlide() {
+  document.getElementById("slideshow-image").src = slides[index].src;
+  document.getElementById("slideshow-link").href = slides[index].link;
+  document.getElementById("slideshow-info").textContent = slides[index].info;
+}
+
+document.querySelector(".next").onclick = () => {
+  index = (index + 1) % slides.length;
+  updateSlide();
+};
+
+document.querySelector(".prev").onclick = () => {
+  index = (index - 1 + slides.length) % slides.length;
+  updateSlide();
+};
+</script>

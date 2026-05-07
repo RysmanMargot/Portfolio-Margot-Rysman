@@ -96,6 +96,30 @@ permalink: /Photography
 .image-info-container:hover .info-bar {
   opacity: 1;
 }
+
+@media (max-width: 600px) {
+
+  /* Info bar always visible on mobile */
+  .info-bar {
+    position: static;
+    opacity: 1;
+    margin-top: 10px;
+    transform: none;
+    left: auto;
+    top: auto;
+    width: 100%;
+  }
+
+  /* Disable hover zoom on mobile */
+  .image-info-container:hover img {
+    transform: none;
+  }
+
+  /* Make slideshow arrows easier to tap */
+  .nav-button {
+    padding: 20px;
+  }
+}
 </style>
 
 <script>

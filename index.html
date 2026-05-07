@@ -16,6 +16,22 @@ layout: default
          <source srcset="images/Collage.png">
         <img src="images/Collage.png" alt="Collage">
     </picture> 
+
+    <a href="/Photography" class="hover-image-link">
+  <img src="/assets/images/Collage.png" alt="Collage">
+</a>
+
+  <style>
+  .hover-image-link img {
+    width: 250px;                 /* adjust size */
+    transition: transform 0.25s ease;
+  }
+  
+  .hover-image-link img:hover {
+    transform: scale(1.08);       /* gentle zoom */
+  }
+  </style>
+    
     <!--<div class="collage">
       {% for image in site.data.collage.images %}
         <div class="collage-item">

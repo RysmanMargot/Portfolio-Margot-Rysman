@@ -39,10 +39,10 @@ permalink: /Photography
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0); /* fully transparent */
+  background: rgba(0, 0, 0, 0); 
   border: none;
-  padding: 15px;               /* bigger click area */
-  font-size: 40px;             /* arrow stays same size */
+  padding: 15px;               
+  font-size: 40px;             
   cursor: pointer;
   color: white;
   z-index: 10;
@@ -68,7 +68,9 @@ permalink: /Photography
 }
 
 .image-info-container img {
-  width: auto;
+  width: 100%;
+  max-width: 700px;  
+  height: auto;
   transition: transform 0.25s ease;
 }
 

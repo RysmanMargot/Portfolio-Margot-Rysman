@@ -12,6 +12,48 @@ permalink: /Photography
   <body>
     <h1>Photography</h1>
 
+    <div class="image-info-container">
+  <a 
+    <img src="/images/fotografie/auto/1.jpg" alt="Car1">
+  </a>
+  <div class="info-bar">
+    After school workshop for car photography and lighting on 05/03/2025.
+  </div>
+</div>
+
+<style>
+.image-info-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-info-container img {
+  width: 250px;
+  transition: transform 0.25s ease;
+}
+
+.image-info-container:hover img {
+  transform: scale(1.08);
+}
+
+.info-bar {
+  position: absolute;
+  top: 50%;
+  left: 260px; /* distance from the image */
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.75);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  white-space: nowrap;
+}
+
+.image-info-container:hover .info-bar {
+  opacity: 1;
+}
+</style>
     
   </body>
 </html>

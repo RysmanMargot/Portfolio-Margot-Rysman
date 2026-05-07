@@ -8,13 +8,17 @@ permalink: /Photography
 
 <div class="slideshow-container">
 
-  <button class="nav-button prev">❮</button>
-
   <div class="image-info-container">
+
+    <!-- LEFT BUTTON ON IMAGE -->
+    <button class="nav-button prev">❮</button>
 
     <a id="slideshow-link" href="https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/auto/1.JPG">
       <img id="slideshow-image" src="images/fotografie/auto/1.JPG" alt="Car1">
     </a>
+
+    <!-- RIGHT BUTTON ON IMAGE -->
+    <button class="nav-button next">❯</button>
 
     <div class="info-bar" id="slideshow-info">
       After school workshop for car photography and lighting on 05/03/2025.
@@ -22,29 +26,41 @@ permalink: /Photography
 
   </div>
 
-  <button class="nav-button next">❯</button>
-
 </div>
 
 <style>
 .slideshow-container {
   display: flex;
-  align-items: center;
-  gap: 10px;
+  justify-content: center;
 }
 
+/* BUTTONS ON TOP OF IMAGE */
 .nav-button {
-  background: #eee;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.7);
   border: none;
   padding: 10px 14px;
-  font-size: 20px;
+  font-size: 24px;
   cursor: pointer;
-  border-radius: 6px;
+  border-radius: 50%;
   transition: background 0.2s ease;
+  z-index: 10;
 }
 
 .nav-button:hover {
-  background: #ddd;
+  background: rgba(255,255,255,0.9);
+}
+
+/* LEFT BUTTON */
+.prev {
+  left: 10px;
+}
+
+/* RIGHT BUTTON */
+.next {
+  right: 10px;
 }
 
 .image-info-container {
@@ -98,12 +114,12 @@ const slides = [
     link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/auto/3.JPG",
     info: "After school workshop for car photography and lighting on 05/03/2025"
   },
-    {
+  {
     src: "images/fotografie/auto/4.JPG",
     link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/auto/4.JPG",
     info: "After school workshop for car photography and lighting on 05/03/2025"
   },
-    {
+  {
     src: "images/fotografie/auto/5.JPG",
     link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/auto/5.JPG",
     info: "After school workshop for car photography and lighting on 05/03/2025"

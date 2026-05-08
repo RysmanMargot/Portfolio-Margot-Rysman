@@ -6,27 +6,48 @@ permalink: /Photography
 
 <h1>Photography</h1>
 
-<div class="slideshow-container">
 
+
+  <h3>Product photography</h3>
+<div class="slideshow" data-slideshow="product">
   <div class="image-info-container">
-
-    <!-- LEFT BUTTON ON IMAGE -->
     <button class="nav-button prev">❮</button>
-
-    <a id="slideshow-link" href="https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/auto/1.JPG">
-      <img id="slideshow-image" src="images/fotografie/auto/1.JPG" alt="Car1">
+    <a class="slideshow-link" href="#">
+      <img class="slideshow-image" src="#" alt="">
     </a>
-
-    <!-- RIGHT BUTTON ON IMAGE -->
     <button class="nav-button next">❯</button>
-
-    <div class="info-bar" id="slideshow-info">
-      After school workshop for car photography and lighting on 05/03/2025
-    </div>
-
+    <div class="info-bar slideshow-info"></div>
   </div>
-
 </div>
+
+<br><br>
+
+  <h3>Lightpainting</h3>
+<div class="slideshow" data-slideshow="light">
+  <div class="image-info-container">
+    <button class="nav-button prev">❮</button>
+    <a class="slideshow-link" href="#">
+      <img class="slideshow-image" src="#" alt="">
+    </a>
+    <button class="nav-button next">❯</button>
+    <div class="info-bar slideshow-info"></div>
+  </div>
+</div>
+
+<br><br>
+
+<h3>Car photography</h3>
+<div class="slideshow" data-slideshow="auto">
+  <div class="image-info-container">
+    <button class="nav-button prev">❮</button>
+    <a class="slideshow-link" href="#">
+      <img class="slideshow-image" src="#" alt="">
+    </a>
+    <button class="nav-button next">❯</button>
+    <div class="info-bar slideshow-info"></div>
+  </div>
+</div>
+
 
 <style>
 .slideshow-container {
@@ -123,50 +144,139 @@ permalink: /Photography
   
 </style>
 
+
 <script>
-const slides = [
-  {
-    src: "images/fotografie/auto/1.JPG",
-    link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/auto/1.JPG",
-    info: "After-school workshop for car photography and lighting on 05/03/2025."
-  },
-  {
-    src: "images/fotografie/auto/2.JPG",
-    link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/auto/2.JPG",
-    info: "After-school workshop for car photography and lighting on 05/03/2025"
-  },
-  {
-    src: "images/fotografie/auto/3.JPG",
-    link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/auto/3.JPG",
-    info: "After-school workshop for car photography and lighting on 05/03/2025"
-  },
-  {
-    src: "images/fotografie/auto/4.JPG",
-    link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/auto/4.JPG",
-    info: "After-school workshop for car photography and lighting on 05/03/2025"
-  },
-  {
-    src: "images/fotografie/auto/5.JPG",
-    link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/auto/5.JPG",
-    info: "After-school workshop for car photography and lighting on 05/03/2025"
+// Define all slideshows here
+const slideshows = {
+  auto: [
+    {
+      src: "images/fotografie/auto/1.JPG",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/auto/1.JPG",
+      info: "After-school workshop for car photography and lighting on 05/03/2025."
+    },
+    {
+      src: "images/fotografie/auto/2.JPG",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/auto/2.JPG",
+      info: "After-school workshop for car photography and lighting on 05/03/2025."
+    },
+    {
+      src: "images/fotografie/auto/3.JPG",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/auto/3.JPG",
+      info: "After-school workshop for car photography and lighting on 05/03/2025."
+    },
+    {
+      src: "images/fotografie/auto/4.JPG",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/auto/4.JPG",
+      info: "After-school workshop for car photography and lighting on 05/03/2025."
+    },
+    {
+      src: "images/fotografie/auto/5.JPG",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/auto/5.JPG",
+      info: "After-school workshop for car photography and lighting on 05/03/2025."
+    }
+  ],
+
+  light: [
+    {
+      src: "images/fotografie/light/1.JPG",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/light/1.JPG",
+      info: "Lightbox session experimenting with lightpainting"
+    },
+    {
+      src: "images/fotografie/light/2.JPG",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/light/2.JPG",
+      info: "Lightbox session experimenting with lightpainting"
+    }
+  ],
+
+  product: [
+    {
+      src: "images/fotografie/product/1.JPG",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/product/1.JPG",
+      info: "Speaker parts printed and cast in resin for Project Engineering - 2nd bachelor"
+    },
+    {
+      src: "images/fotografie/product/2.JPG",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/product/2.JPG",
+      info: "Final speaker combining multiple production techniques for Project Engineering - 2nd bachelor"
+    },
+    {
+      src: "images/fotografie/product/3.JPG",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/product/3.JPG",
+      info: "Final speaker combining multiple production techniques, with both versions of the grid shown, for Project Engineering - 2nd bachelor"
+    },
+    {
+      src: "images/fotografie/product/4.JPG",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/product/4.JPG",
+      info: "Final speaker combining multiple production techniques for Project Engineering - 2nd bachelor"
+    },
+    {
+      src: "images/fotografie/product/5.JPG",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/product/5.JPG",
+      info: "Final product for Plonze, a fully computational personalised swimming goggle for Project Advanced Engineering - 3rd bachelor"
+    },
+    {
+      src: "images/fotografie/product/6.JPG",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/product/6.JPG",
+      info: "Final product for Plonze, a fully computational personalised swimming goggle for Project Advanced Engineering - 3rd bachelor"
+    },
+    {
+      src: "images/fotografie/product/7.JPG",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/product/7.JPG",
+      info: "Final product for Plonze, a fully computational personalised swimming goggle for Project Advanced Engineering - 3rd bachelor"
+    },
+    {
+      src: "images/fotografie/product/8.JPG",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/product/8.JPG",
+      info: "Final product for Plonze, a fully computational personalised swimming goggle for Project Advanced Engineering - 3rd bachelor"
+    },
+    {
+      src: "images/fotografie/product/9.JPG",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/product/9.JPG",
+      info: "Personal project, painted model of Kassandra from Assassin's creed Odyssey. Painted by Margot Rysman, model by H3llcreator"
+    },
+    {
+      src: "images/fotografie/product/10.JPG",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/product/10.JPG",
+      info: "Personal project, painted models of two small toads for a friend. Painted by Margot Rysman, model by Bulkamancer"
+    },
+    {
+      src: "images/fotografie/product/11.JPG",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/product/11.JPG",
+      info: "Personal project, primed model of Jester Lavorre from Critical Role, campaign 2. Primed by Margot Rysman, model by H3llcreator"
+    }
+  ]
+};
+
+// Initialize all slideshows
+document.querySelectorAll(".slideshow").forEach(slideshow => {
+
+  const name = slideshow.dataset.slideshow;
+  const slides = slideshows[name];
+  let index = 0;
+
+  const img = slideshow.querySelector(".slideshow-image");
+  const link = slideshow.querySelector(".slideshow-link");
+  const info = slideshow.querySelector(".slideshow-info");
+
+  function update() {
+    img.src = slides[index].src;
+    link.href = slides[index].link;
+    info.textContent = slides[index].info;
   }
-];
 
-let index = 0;
+  update();
 
-function updateSlide() {
-  document.getElementById("slideshow-image").src = slides[index].src;
-  document.getElementById("slideshow-link").href = slides[index].link;
-  document.getElementById("slideshow-info").textContent = slides[index].info;
-}
+  slideshow.querySelector(".next").onclick = () => {
+    index = (index + 1) % slides.length;
+    update();
+  };
 
-document.querySelector(".next").onclick = () => {
-  index = (index + 1) % slides.length;
-  updateSlide();
-};
+  slideshow.querySelector(".prev").onclick = () => {
+    index = (index - 1 + slides.length) % slides.length;
+    update();
+  };
 
-document.querySelector(".prev").onclick = () => {
-  index = (index - 1 + slides.length) % slides.length;
-  updateSlide();
-};
+});
 </script>
+

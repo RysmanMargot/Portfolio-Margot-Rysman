@@ -3,14 +3,232 @@ layout: page
 title: "Rendering"
 permalink: /Rendering
 ---
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Margot Rysman — Portfolio</title>
-  </head>
-  <body>
-    <h1>Rendering</h1>
-    
-  </body>
-</html>
+<h1>Photography</h1>
+
+
+  <h3>Plexilum</h3>
+<p>Renders made for Grafische Ontwerpcommunicatie - 2nd bachelor, of a prototype from Introductie tot Industrieel Ontwerpen - 1st bachelor</p>
+<div class="slideshow" data-slideshow="plexilum">
+  <div class="image-info-container">
+    <button class="nav-button prev">❮</button>
+    <a class="slideshow-link" href="#">
+      <img class="slideshow-image" src="#" alt="">
+    </a>
+    <button class="nav-button next">❯</button>
+    <div class="info-bar slideshow-info"></div>
+  </div>
+</div>
+
+<br><br>
+
+  <h3>Plonze</h3>
+<p>A project realising a fully computational personalised swimming goggle for Project Advanced Engineering - 3rd bachelor</p>
+<div class="slideshow" data-slideshow="plonze">
+  <div class="image-info-container">
+    <button class="nav-button prev">❮</button>
+    <a class="slideshow-link" href="#">
+      <img class="slideshow-image" src="#" alt="">
+    </a>
+    <button class="nav-button next">❯</button>
+    <div class="info-bar slideshow-info"></div>
+  </div>
+</div>
+
+<br><br>
+
+<h3>Standalone renders</h3>
+<p>Renders from various projects and classes</p>
+<div class="slideshow" data-slideshow="render">
+  <div class="image-info-container">
+    <button class="nav-button prev">❮</button>
+    <a class="slideshow-link" href="#">
+      <img class="slideshow-image" src="#" alt="">
+    </a>
+    <button class="nav-button next">❯</button>
+    <div class="info-bar slideshow-info"></div>
+  </div>
+</div>
+
+<style>
+.slideshow-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* BUTTONS ON TOP OF IMAGE */
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0); 
+  border: none;
+  padding: 15px;               
+  font-size: 40px;             
+  cursor: pointer;
+  color: white;
+  z-index: 10;
+}
+
+.nav-button:hover {
+  background: rgba(255,255,255,0.9);
+}
+
+/* LEFT BUTTON */
+.prev {
+  left: 10px;
+}
+
+/* RIGHT BUTTON */
+.next {
+  right: 10px;
+}
+
+.image-info-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-info-container img {
+  width: 100%;
+  max-width: 1000px;  
+  height: auto;
+  transition: transform 0.25s ease;
+}
+
+.image-info-container:hover img {
+  transform: scale(1.08);
+}
+
+.info-bar {
+  position: absolute;
+  top: 50%;
+  left: 110%;
+  transform: translateY(-50%);
+  background: rgba(240, 240, 240, 0.85);
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 6px;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  width: 200px;
+  line-height: 1.3;
+}
+
+.image-info-container:hover .info-bar {
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+
+  /* Info bar always visible on mobile */
+  .info-bar {
+    position: static;
+    opacity: 1;
+    margin-top: 10px;
+    transform: none;
+    left: auto;
+    top: auto;
+    width: 100%;
+  }
+
+  /* Disable hover zoom on mobile */
+  .image-info-container:hover img {
+    transform: none;
+  }
+
+  /* Make slideshow arrows easier to tap */
+  .nav-button {
+    padding: 20px;
+  }
+}
+  
+</style>
+
+
+<script>
+// Define all slideshows here
+const slideshows = {
+  render: [
+    {
+      src: "images/renders/standalone/1.JPG",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/renders/standalone/1.JPG",
+      info: "Moodboard made for Grafische Ontwerpcommunicatie - 2nd bachelor"
+    },
+    {
+      src: "images/renders/standalone/2.png",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/renders/standalone/2.png",
+      info: "Render made during class in Grafische Ontwerpcommunicatie - 2nd bachelor"
+    },
+    {
+      src: "images/renders/standalone/3.png",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/renders/standalone/3.png",
+      info: "Render of a Morakniv knife, modeled using surface modeling for Geavanceerde CAD - 2nd bachelor"
+    }
+  ],
+  plonze: [
+    {
+      src: "images/renders/plonze/1.png",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/renders/plonze/1.png",
+      info: "Render of Plonze, the computational personalised swimming goggles, made for Project Geavanceerde Engineering - 3rd bachelor"
+    },
+    {
+      src: "images/renders/plonze/2.png",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/renders/plonze/2.png",
+      info: "Render of Plonze, the computational personalised swimming goggles, made for Project Geavanceerde Engineering - 3rd bachelor"
+    }
+  ],
+  plexilum: [
+    {
+      src: "images/renders/plexilum/1.png",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/renders/standalone/1.png",
+      info: "Moodboard made for Grafische Ontwerpcommunicatie - 2nd bachelor"
+    },
+    {
+      src: "images/renders/plexilum/2.png",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/renders/standalone/2.png",
+      info: "Render made during class in Grafische Ontwerpcommunicatie - 2nd bachelor"
+    },
+    {
+      src: "images/renders/plexilum/3.png",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/renders/standalone/3.png",
+      info: "Render of a Morakniv knife, modeled using surface modeling for Geavanceerde CAD - 2nd bachelor"
+    },
+    {
+      src: "images/renders/plexilum/4.png",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/renders/standalone/4.png",
+      info: "Render of a Morakniv knife, modeled using surface modeling for Geavanceerde CAD - 2nd bachelor"
+    }
+  ]
+};
+
+// Initialize all slideshows
+document.querySelectorAll(".slideshow").forEach(slideshow => {
+
+  const name = slideshow.dataset.slideshow;
+  const slides = slideshows[name];
+  let index = 0;
+
+  const img = slideshow.querySelector(".slideshow-image");
+  const link = slideshow.querySelector(".slideshow-link");
+  const info = slideshow.querySelector(".slideshow-info");
+
+  function update() {
+    img.src = slides[index].src;
+    link.href = slides[index].link;
+    info.textContent = slides[index].info;
+  }
+
+  update();
+
+  slideshow.querySelector(".next").onclick = () => {
+    index = (index + 1) % slides.length;
+    update();
+  };
+
+  slideshow.querySelector(".prev").onclick = () => {
+    index = (index - 1 + slides.length) % slides.length;
+    update();
+  };
+
+});
+</script>

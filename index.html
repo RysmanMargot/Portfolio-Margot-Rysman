@@ -10,12 +10,13 @@ layout: default
   <body>
     <h1>Welcome to my portfolio</h1>
     <p>Site under construction.</p>
-    
-    <picture>
+
+    <img class="wide-image" src="images/Collage.png" alt="Collage">
+    <!--<picture>
         <source srcset="images/Collage.png" media="(max-width: 400px)">
          <source srcset="images/Collage.png">
         <img src="images/Collage.png" alt="Collage">
-    </picture> 
+    </picture> -->
 
     <a href="https://rysmanmargot.github.io/Portfolio-Margot-Rysman/Photography" class="hover-image-link">
   <img src="images/Fotografie.png" alt="Fotografie">
@@ -33,6 +34,13 @@ layout: default
   .hover-image-link img {
     width: auto;                 /* adjust size */
     transition: transform 0.25s ease;
+  }
+
+  .wide-image {
+  width: 100%;
+  max-width: 1400px;   /* bigger than the theme */
+  display: block;
+  margin: 0 auto;
   }
   
   .hover-image-link img:hover {

@@ -13,11 +13,18 @@ layout: default
     <p>Site under construction.</p>
 
   
-    <picture>
+    <!--<picture>
         <source srcset="images/Collage.png" media="(max-width: 400px)">
          <source srcset="images/Collage.png">
         <img src="images/Collage.png" alt="Collage">
-    </picture>
+    </picture>-->
+
+  <div class="fade-slideshow">
+  <img src="images/intro1.png" class="slide">
+  <img src="images/intro2.png" class="slide">
+  <img src="images/intro3.png" class="slide">
+  <img src="images/intro4.png" class="slide">
+</div>
 
   <p>Hi! I'm Margot Rysman, currently 3rd year Industrial Design student at Ghent University in Kortrijk. I live around Bruges and studied there for my secondary education at the Sint-Jozefshumaniora, where I studied Latin and Math.
   <br><br>I've always loved making <i>and</i> destroying them, wanting to find out for myself how they work. I followed that passion throughout my youth, participating in technical clubs at school like T4U where I printed, sawed and glued to my hearts content. And now I get to continue it as a job! What a life to live.
@@ -56,15 +63,40 @@ layout: default
     transform: scale(1.08);       /* gentle zoom */
   }
   h2{font-family: 'Freestyle Script', sans-serif; font-size: 100px; color: #080084;}
+
+  .fade-slideshow {
+  position: relative;
+  width: 400px;      /* adjust size */
+  height: 260px;
+  overflow: hidden;
+}
+
+.fade-slideshow .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  opacity: 0;
+  animation: fade 16s infinite;
+}
+
+/* Delay each image */
+.fade-slideshow .slide:nth-child(1) { animation-delay: 0s; }
+.fade-slideshow .slide:nth-child(2) { animation-delay: 4s; }
+.fade-slideshow .slide:nth-child(3) { animation-delay: 8s; }
+.fade-slideshow .slide:nth-child(4) { animation-delay: 12s; }
+
+@keyframes fade {
+  0%   { opacity: 0; }
+  10%  { opacity: 1; }
+  25%  { opacity: 1; }
+  35%  { opacity: 0; }
+  100% { opacity: 0; }
+}
   </style>
-    
-    <!--<div class="collage">
-      {% for image in site.data.collage.images %}
-        <div class="collage-item">
-          <img src="{{ image.src }}" alt="{{ image.alt }}">
-        </div>
-      {% endfor %}
-    </div>-->
+
+  
     
 
     

@@ -70,52 +70,18 @@ permalink: /Plonze
 <h3>Report</h3>
 <p>With the photographs taken, I could build my final report in Affinity Publisher 2. This contains the full process, from start to finish. A simple presentation and a poster were also made.</p>
 <br>
-<object
-  data="https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/documents/plonze/Report.pdf"
-  type="application/pdf"
-  width="100%"
-  height="100%"
->
-  <iframe
-    src="https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/documents/plonze/Report.pdf"
-    width="100%"
-    height="100%"
-    style="border: none;"
-  >
-    <p>
-      Your browser does not support PDF viewing.
-      <a href="https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/documents/plonze/Report.pdf">Download the PDF</a>.
-    </p>
-  </iframe>
-</object>
-<br>
-<object
-  data="https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/documents/plonze/Presentation.pdf"
-  type="application/pdf"
-  width="100%"
-  height="100%"
->
-  <iframe
-    src="https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/documents/plonze/Presentation.pdf"
-    width="100%"
-    height="100%"
-    style="border: none;"
-  >
-    <p>
-      Your browser does not support PDF viewing.
-      <a href="https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/documents/plonze/Presentation.pdf">Download the PDF</a>.
-    </p>
-  </iframe>
-</object>
-<!--<embed src="https://drive.google.com/viewerng/
-viewer?embedded=true&url=https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/documents/plonze/Report.pdf" width="500" height="375">
+<embed src="https://drive.google.com/viewerng/
+viewer?embedded=true&url=https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/documents/plonze/ReportSmall.pdf" width="500" height="375">
+<a href="https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/documents/plonze/Report.pdf">Download this full report here.</a>
 <br>
 <embed src="https://drive.google.com/viewerng/
 viewer?embedded=true&url=https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/documents/plonze/Presentation.pdf" width="500" height="375">
-<br>-->
+<a href="https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/documents/plonze/Presentation.pdf">Download this full presentation here.</a>
+<br>
 <a href="https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/plonze/report/1.png">
   <img src="images/plonze/report/1.png" alt="Poster" style="width:80%">
 </a>
+
 
 <br><br>
 
@@ -236,6 +202,7 @@ const slideshows = {
       src: "images/plonze/prep/1.png",
       link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/plonze/prep/1.png",
       info: "Points to measure as input for the program, based on my research"
+      maxHeight: "500px"
     },
     {
       src: "images/plonze/prep/2.png",
@@ -263,11 +230,13 @@ const slideshows = {
       src: "images/plonze/code/1.png",
       link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/plonze/code/1.png",
       info: "The model of the death mask of king Henry IV of France, used as base for the goggles"
+      maxHeight: "500px"
     },
     {
       src: "images/plonze/code/3.png",
       link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/plonze/code/3.png",
-      info: "Part of the code showing the input for the prototype. The infal input would be done thorugh a .csv file"
+      info: "Part of the code showing the input for the prototype. The infal input would be done through a .csv file"
+      maxHeight: "500px"
     },
     {
       src: "images/plonze/code/4.png",
@@ -389,11 +358,20 @@ document.querySelectorAll(".slideshow").forEach(slideshow => {
   const link = slideshow.querySelector(".slideshow-link");
   const info = slideshow.querySelector(".slideshow-info");
 
-  function update() {
-    img.src = slides[index].src;
-    link.href = slides[index].link;
-    info.textContent = slides[index].info;
+function update() {
+  img.src = slides[index].src;
+  link.href = slides[index].link;
+  info.textContent = slides[index].info;
+
+  // Apply per-image height fix
+  if (slides[index].maxHeight) {
+    img.style.maxHeight = slides[index].maxHeight;
+    img.style.objectFit = "cover";
+  } else {
+    img.style.maxHeight = "";
+    img.style.objectFit = "";
   }
+}
 
   update();
 

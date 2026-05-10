@@ -3,3 +3,242 @@ layout: page
 title: "Plonze"
 permalink: /Plonze
 ---
+<h1>Plonze</h1>
+<p>Within Project Geavanceerde Engineering we focused on parametric design and the modes of personalisation. We learned how to work with Grasshopper, within Rhino, to model compationally, which makes mass peersonalisation possible.</p>
+<p>I made Plonze, swimming goggles fully modeled based on certain measuring points on the face of the user.</p>
+
+  <h3>Preparation</h3>
+<p>After doing research, deciding on the modes of personalisation in the design, how to measure the necessary points and exploring manufacturing possibilities, a customer journey was made as well as a map of the personalisation and the user interactions during this process.</p>
+<div class="slideshow" data-slideshow="prep">
+  <div class="image-info-container">
+    <button class="nav-button prev">❮</button>
+    <a class="slideshow-link" href="#">
+      <img class="slideshow-image" src="#" alt="">
+    </a>
+    <button class="nav-button next">❯</button>
+    <div class="info-bar slideshow-info"></div>
+  </div>
+</div>
+
+<br><br>
+
+<h3>Coding</h3>
+<p>Now the coding can begin. Using the inputs measured previously, with a model of a french king as try-out face, the full swimming goggles are modeled. For a more detailed look at how I modeled it, you can take a look at my full design report further below.</p>
+<div class="slideshow" data-slideshow="code">
+  <div class="image-info-container">
+    <button class="nav-button prev">❮</button>
+    <a class="slideshow-link" href="#">
+      <img class="slideshow-image" src="#" alt="">
+    </a>
+    <button class="nav-button next">❯</button>
+    <div class="info-bar slideshow-info"></div>
+  </div>
+</div>
+
+<br><br>
+
+<h3>Final model</h3>
+<p>Once fully modeled, the goggles can be exported as .stl file and sliced for their selective additive manufacturing processes. A preview can be "rendered" in Rhino itself, using custom previews for the code to show the proper colours.</p>
+<div class="slideshow" data-slideshow="model">
+  <div class="image-info-container">
+    <button class="nav-button prev">❮</button>
+    <a class="slideshow-link" href="#">
+      <img class="slideshow-image" src="#" alt="">
+    </a>
+    <button class="nav-button next">❯</button>
+    <div class="info-bar slideshow-info"></div>
+  </div>
+</div>
+
+<br><br>
+
+<h3>Prototype</h3>
+<p>A prototype was made with the output files, which I then photographed in a lightbox for presentational uses and to add to the report. The prototype existed of a simple PLA-printed frame, and the skirts and nose bridge were printed using a flexible resin.</p>
+<div class="slideshow" data-slideshow="prototype">
+  <div class="image-info-container">
+    <button class="nav-button prev">❮</button>
+    <a class="slideshow-link" href="#">
+      <img class="slideshow-image" src="#" alt="">
+    </a>
+    <button class="nav-button next">❯</button>
+    <div class="info-bar slideshow-info"></div>
+  </div>
+</div>
+
+<br><br>
+
+<h3>Report</h3>
+<p>With the photographs taken, I could build my final report in Affinity Publisher. This contains the full process, from start to finish. A simple presentation and a poster were also made.</p>
+<br>
+<embed src="https://drive.google.com/viewerng/
+viewer?embedded=true&url=https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/documents/plonze/report.pdf" width="500" height="375">
+<br>
+<embed src="https://drive.google.com/viewerng/
+viewer?embedded=true&url=https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/documents/plonze/presentation.pdf" width="500" height="375">
+<br>
+<!-- Add image of poster here-->
+
+<br><br>
+
+<h3>Renders</h3>
+<p>After finishing this project, I realised I wasn't fully content with the model renders I could make in Rhino, so I decided to fully render the model in Autodesk VRED.</p>
+<div class="slideshow" data-slideshow="render">
+  <div class="image-info-container">
+    <button class="nav-button prev">❮</button>
+    <a class="slideshow-link" href="#">
+      <img class="slideshow-image" src="#" alt="">
+    </a>
+    <button class="nav-button next">❯</button>
+    <div class="info-bar slideshow-info"></div>
+  </div>
+</div>
+
+<style>
+.slideshow-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* BUTTONS ON TOP OF IMAGE */
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0); 
+  border: none;
+  padding: 15px;               
+  font-size: 40px;             
+  cursor: pointer;
+  color: white;
+  z-index: 10;
+}
+
+.nav-button:hover {
+  background: rgba(255,255,255,0.9);
+}
+
+/* LEFT BUTTON */
+.prev {
+  left: 10px;
+}
+
+/* RIGHT BUTTON */
+.next {
+  right: 10px;
+}
+
+.image-info-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-info-container img {
+  width: 100%;
+  max-width: 1000px;  
+  height: auto;
+  transition: transform 0.25s ease;
+}
+
+.image-info-container:hover img {
+  transform: scale(1.08);
+}
+
+.info-bar {
+  position: absolute;
+  top: 50%;
+  left: 110%;
+  transform: translateY(-50%);
+  background: rgba(240, 240, 240, 0.85);
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 6px;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  width: 200px;
+  line-height: 1.3;
+}
+
+.image-info-container:hover .info-bar {
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+
+  /* Info bar always visible on mobile */
+  .info-bar {
+    position: static;
+    opacity: 1;
+    margin-top: 10px;
+    transform: none;
+    left: auto;
+    top: auto;
+    width: 100%;
+  }
+
+  /* Disable hover zoom on mobile */
+  .image-info-container:hover img {
+    transform: none;
+  }
+
+  /* Make slideshow arrows easier to tap */
+  .nav-button {
+    padding: 20px;
+  }
+}
+  
+</style>
+
+
+<script>
+// Define all slideshows here
+const slideshows = {
+  fastfashion: [
+    {
+      src: "images/systems thinking/1.png",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/systems thinking/1.png",
+      info: "Presentational poster for our fast fashion crime scene, with digital rope to showcase what we added during the presentation itself"
+    },
+    {
+      src: "images/systems thinking/2.png",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/systems thinking/2.png",
+      info: "Presentational poster for our fast fashion crime scene"
+    },
+    {
+      src: "images/systems thinking/3.png",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/systems thinking/3.png",
+      info: "System loops mapped for this case"
+    }
+  ]
+};
+
+// Initialize all slideshows
+document.querySelectorAll(".slideshow").forEach(slideshow => {
+
+  const name = slideshow.dataset.slideshow;
+  const slides = slideshows[name];
+  let index = 0;
+
+  const img = slideshow.querySelector(".slideshow-image");
+  const link = slideshow.querySelector(".slideshow-link");
+  const info = slideshow.querySelector(".slideshow-info");
+
+  function update() {
+    img.src = slides[index].src;
+    link.href = slides[index].link;
+    info.textContent = slides[index].info;
+  }
+
+  update();
+
+  slideshow.querySelector(".next").onclick = () => {
+    index = (index + 1) % slides.length;
+    update();
+  };
+
+  slideshow.querySelector(".prev").onclick = () => {
+    index = (index - 1 + slides.length) % slides.length;
+    update();
+  };
+
+});
+</script>

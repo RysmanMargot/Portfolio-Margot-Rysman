@@ -1,0 +1,281 @@
+---
+layout: page
+title: "Speaker"
+permalink: /Speaker
+---
+
+<h1>Speaker</h1>
+
+
+
+  <h3>Product photography</h3>
+<div class="slideshow" data-slideshow="product">
+  <div class="image-info-container">
+    <button class="nav-button prev">❮</button>
+    <a class="slideshow-link" href="#">
+      <img class="slideshow-image" src="#" alt="">
+    </a>
+    <button class="nav-button next">❯</button>
+    <div class="info-bar slideshow-info"></div>
+  </div>
+</div>
+
+<br><br>
+
+  <h3>Lightpainting</h3>
+<div class="slideshow" data-slideshow="light">
+  <div class="image-info-container">
+    <button class="nav-button prev">❮</button>
+    <a class="slideshow-link" href="#">
+      <img class="slideshow-image" src="#" alt="">
+    </a>
+    <button class="nav-button next">❯</button>
+    <div class="info-bar slideshow-info"></div>
+  </div>
+</div>
+
+<br><br>
+
+<h3>Car photography</h3>
+<div class="slideshow" data-slideshow="auto">
+  <div class="image-info-container">
+    <button class="nav-button prev">❮</button>
+    <a class="slideshow-link" href="#">
+      <img class="slideshow-image" src="#" alt="">
+    </a>
+    <button class="nav-button next">❯</button>
+    <div class="info-bar slideshow-info"></div>
+  </div>
+</div>
+
+
+<style>
+.slideshow-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* BUTTONS ON TOP OF IMAGE */
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0); 
+  border: none;
+  padding: 15px;               
+  font-size: 40px;             
+  cursor: pointer;
+  color: white;
+  z-index: 10;
+}
+
+.nav-button:hover {
+  background: rgba(255,255,255,0.9);
+}
+
+/* LEFT BUTTON */
+.prev {
+  left: 10px;
+}
+
+/* RIGHT BUTTON */
+.next {
+  right: 10px;
+}
+
+.image-info-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-info-container img {
+  width: 100%;
+  max-width: 1000px;  
+  height: auto;
+  transition: transform 0.25s ease;
+}
+
+.image-info-container:hover img {
+  transform: scale(1.08);
+}
+
+.info-bar {
+  position: absolute;
+  top: 50%;
+  left: 110%;
+  transform: translateY(-50%);
+  background: rgba(240, 240, 240, 0.85);
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 6px;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  width: 200px;
+  line-height: 1.3;
+}
+
+.image-info-container:hover .info-bar {
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+
+  /* Info bar always visible on mobile */
+  .info-bar {
+    position: static;
+    opacity: 1;
+    margin-top: 10px;
+    transform: none;
+    left: auto;
+    top: auto;
+    width: 100%;
+  }
+
+  /* Disable hover zoom on mobile */
+  .image-info-container:hover img {
+    transform: none;
+  }
+
+  /* Make slideshow arrows easier to tap */
+  .nav-button {
+    padding: 20px;
+  }
+}
+  
+</style>
+
+
+<script>
+// Define all slideshows here
+const slideshows = {
+  auto: [
+    {
+      src: "images/fotografie/auto/1.JPG",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/auto/1.JPG",
+      info: "After-school workshop for car photography and lighting on 05/03/2025."
+    },
+    {
+      src: "images/fotografie/auto/2.JPG",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/auto/2.JPG",
+      info: "After-school workshop for car photography and lighting on 05/03/2025."
+    },
+    {
+      src: "images/fotografie/auto/3.JPG",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/auto/3.JPG",
+      info: "After-school workshop for car photography and lighting on 05/03/2025."
+    },
+    {
+      src: "images/fotografie/auto/4.JPG",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/auto/4.JPG",
+      info: "After-school workshop for car photography and lighting on 05/03/2025."
+    },
+    {
+      src: "images/fotografie/auto/5.JPG",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/auto/5.JPG",
+      info: "After-school workshop for car photography and lighting on 05/03/2025."
+    }
+  ],
+
+  light: [
+    {
+      src: "images/fotografie/light/1.jpg",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/light/1.jpg",
+      info: "Lightbox session experimenting with lightpainting"
+    },
+    {
+      src: "images/fotografie/light/2.png",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/light/2.png",
+      info: "Lightbox session experimenting with lightpainting"
+    }
+  ],
+
+  product: [
+    {
+      src: "images/fotografie/product/1.png",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/product/1.png",
+      info: "Speaker parts printed and cast in resin for Project Engineering - 2nd bachelor"
+    },
+    {
+      src: "images/fotografie/product/2.png",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/product/2.png",
+      info: "Final speaker combining multiple production techniques for Project Engineering - 2nd bachelor"
+    },
+    {
+      src: "images/fotografie/product/3.png",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/product/3.png",
+      info: "Final speaker combining multiple production techniques, with both versions of the grid shown, for Project Engineering - 2nd bachelor"
+    },
+    {
+      src: "images/fotografie/product/4.png",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/product/4.png",
+      info: "Final speaker combining multiple production techniques for Project Engineering - 2nd bachelor"
+    },
+    {
+      src: "images/fotografie/product/5.png",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/product/5.png",
+      info: "Final product for Plonze, a fully computational personalised swimming goggle for Project Advanced Engineering - 3rd bachelor"
+    },
+    {
+      src: "images/fotografie/product/6.png",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/product/6.png",
+      info: "Final product for Plonze, a fully computational personalised swimming goggle for Project Advanced Engineering - 3rd bachelor"
+    },
+    {
+      src: "images/fotografie/product/7.png",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/product/7.png",
+      info: "Final product for Plonze, a fully computational personalised swimming goggle for Project Advanced Engineering - 3rd bachelor"
+    },
+    {
+      src: "images/fotografie/product/8.png",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/product/8.png",
+      info: "Final product for Plonze, a fully computational personalised swimming goggle for Project Advanced Engineering - 3rd bachelor"
+    },
+    {
+      src: "images/fotografie/product/9.png",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/product/9.png",
+      info: "Personal project, painted model of Kassandra from Assassin's creed Odyssey. Painted by Margot Rysman, model by H3llcreator"
+    },
+    {
+      src: "images/fotografie/product/10.png",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/product/10.png",
+      info: "Personal project, painted models of two small toads for a friend. Painted by Margot Rysman, model by Bulkamancer"
+    },
+    {
+      src: "images/fotografie/product/11.png",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/fotografie/product/11.png",
+      info: "Personal project, primed model of Jester Lavorre from Critical Role, campaign 2. Primed by Margot Rysman, model by H3llcreator"
+    }
+  ]
+};
+
+// Initialize all slideshows
+document.querySelectorAll(".slideshow").forEach(slideshow => {
+
+  const name = slideshow.dataset.slideshow;
+  const slides = slideshows[name];
+  let index = 0;
+
+  const img = slideshow.querySelector(".slideshow-image");
+  const link = slideshow.querySelector(".slideshow-link");
+  const info = slideshow.querySelector(".slideshow-info");
+
+  function update() {
+    img.src = slides[index].src;
+    link.href = slides[index].link;
+    info.textContent = slides[index].info;
+  }
+
+  update();
+
+  slideshow.querySelector(".next").onclick = () => {
+    index = (index + 1) % slides.length;
+    update();
+  };
+
+  slideshow.querySelector(".prev").onclick = () => {
+    index = (index - 1 + slides.length) % slides.length;
+    update();
+  };
+
+});
+</script>

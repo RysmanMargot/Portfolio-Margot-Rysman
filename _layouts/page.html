@@ -23,7 +23,7 @@
 
         <p>{{ site.description | default: site.github.project_tagline }}</p>
 
-        <a href="https://www.linkedin.com/in/margot-rysman-6479273a0/"> 
+        <a href="https://www.linkedin.com/in/margot-rysman-6479273a0/" class="hover-image-link"> 
           <img src="images/Profile.png" alt="Profile Picture" style="width:100px;height:auto"> 
         </a>
         <p class="view"><a href="https://www.linkedin.com/in/margot-rysman-6479273a0/">View my LinkedIn </a></p>
@@ -65,3 +65,15 @@
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
   </body>
 </html>
+
+<style>
+   .hover-image-link img {
+    width: auto;                 /* adjust size */
+    transition: transform 0.25s ease;
+  }
+
+  
+  .hover-image-link img:hover {
+    transform: scale(1.08);       /* gentle zoom */
+  }
+</style>

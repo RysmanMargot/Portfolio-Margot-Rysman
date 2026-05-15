@@ -141,7 +141,7 @@ const slideshows = {
     {
       src: "images/sketching/product/1.png",
       link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/sketching/product/1.png",
-      info: "Study of a cooking pot, working with metal shading, reflections and cross sections."
+      info: "Study of a cooking pot, working on metal shading, reflections and cross sections."
     },
     {
       src: "images/sketching/product/2.JPG",
@@ -151,7 +151,8 @@ const slideshows = {
     {
       src: "images/sketching/product/3.JPG",
       link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/sketching/product/3.JPG",
-      info: "Redesign of greek letters for later use in perspective."
+      info: "Redesign of greek letters for later use in perspective.",
+      maxHeight: "500px"
     },
     {
       src: "images/sketching/product/4.JPG",
@@ -181,7 +182,8 @@ const slideshows = {
     {
       src: "images/sketching/product/9.JPG",
       link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/sketching/product/9.JPG",
-      info: "Study of different extrusions in perspective."
+      info: "Study of different extrusions in perspective.",
+      maxHeight: "500px"
     }
   ],
 
@@ -194,7 +196,8 @@ const slideshows = {
     {
       src: "images/sketching/project/2.png",
       link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/sketching/project/2.png",
-      info: "A shape matrix made for a wearable UV detector, showing different connections and button types."
+      info: "A shape matrix made for a wearable UV detector, showing different connections and button types.",
+      maxHeight: "500px"
     },
     {
       src: "images/sketching/project/3.png",
@@ -220,11 +223,20 @@ document.querySelectorAll(".slideshow").forEach(slideshow => {
   const link = slideshow.querySelector(".slideshow-link");
   const info = slideshow.querySelector(".slideshow-info");
 
-  function update() {
-    img.src = slides[index].src;
-    link.href = slides[index].link;
-    info.textContent = slides[index].info;
+function update() {
+  img.src = slides[index].src;
+  link.href = slides[index].link;
+  info.textContent = slides[index].info;
+
+  // Apply per-image height fix
+  if (slides[index].maxHeight) {
+    img.style.maxHeight = slides[index].maxHeight;
+    img.style.objectFit = "cover";
+  } else {
+    img.style.maxHeight = "";
+    img.style.objectFit = "";
   }
+}
 
   update();
 

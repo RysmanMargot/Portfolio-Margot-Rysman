@@ -15,19 +15,18 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
+        <h1><a href="{{ "/" | absolute_url }}" style="color:#080084;">{{ site.title | default: site.github.repository_name }}</a></h1>
 
         {% if site.logo %}
           <img src="{{site.logo | relative_url}}" alt="Logo" />
         {% endif %}
 
         <p>{{ site.description | default: site.github.project_tagline }}</p>
-
         <a href="https://www.linkedin.com/in/margot-rysman-6479273a0/" class="hover-image-link"> 
           <img src="images/Profile.png" alt="Profile Picture" style="width:100px;height:auto"> 
         </a>
-        <p class="view"><a href="https://www.linkedin.com/in/margot-rysman-6479273a0/">View my LinkedIn </a></p>
-         <br>
+        <p class="view"><a href="https://www.linkedin.com/in/margot-rysman-6479273a0/" style="color:#080084;">View my LinkedIn </a></p>
+        <br>
         <p><b>Contact me at:</b><br>
         School: <a href="mailto:margot.rysman@ugent.be" style="color:#080084;"><i>margot.rysman@ugent.be</i></a> <br>
         Personal: <a href="mailto:rysmanmargot@gmail.com" style="color:#080084;"><i>rysmanmargot@gmail.com</i></a></p>
@@ -41,7 +40,6 @@
         &emsp;2.2. <a style="color:Black;" href="https://rysmanmargot.github.io/Portfolio-Margot-Rysman/Rendering">Rendering</a> <br>
         &emsp;2.3. <a style="color:Black;" href="https://rysmanmargot.github.io/Portfolio-Margot-Rysman/Systems_thinking">Systems thinking</a><br>
         &emsp;2.4. <a style="color:Black;" href="https://rysmanmargot.github.io/Portfolio-Margot-Rysman/Sketching">Sketching</a>
-        
 
         {% if site.show_downloads %}
         <ul class="downloads">
@@ -58,7 +56,7 @@
       </section>
       <footer>
         {% if site.github.is_project_page %}
-        <p>This project is programmed and maintained by <a href="{{ site.github.owner_url }}">Margot Rysman</a></p>
+        <p>This project is programmed and maintained by <a href="{{ site.github.owner_url }}" style="color:#080084;">Margot Rysman</a></p>
         {% endif %}
       </footer>
     </div>

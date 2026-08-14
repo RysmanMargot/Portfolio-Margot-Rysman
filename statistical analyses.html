@@ -127,17 +127,18 @@ const slideshows = {
   statbasics: [
     {
       src: "images/statistiek/1.png",
-      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/systems thinking/1.png",
-      info: "Example of Wilcoxon test performed in Excel, on data on the acidity of lakes in the southern Alps."
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/statistiek/1.png",
+      info: "Example of Wilcoxon test performed in Excel, on data on the acidity of lakes in the southern Alps.",
+      maxHeight: "500px"
     },
     {
       src: "images/statistiek/2.png",
-      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/systems thinking/2.png",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/statistiek/2.png",
       info: "Example of ANOVA test performed in Excel, on data on energy usage in the US."
     },
     {
       src: "images/statistiek/3.png",
-      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/systems thinking/3.png",
+      link: "https://raw.githubusercontent.com/RysmanMargot/Portfolio-Margot-Rysman/refs/heads/main/images/statistiek/3.png",
       info: "Normality test using a normality plot in Excel."
     }
   ]
@@ -155,10 +156,19 @@ document.querySelectorAll(".slideshow").forEach(slideshow => {
   const info = slideshow.querySelector(".slideshow-info");
 
   function update() {
-    img.src = slides[index].src;
-    link.href = slides[index].link;
-    info.textContent = slides[index].info;
+  img.src = slides[index].src;
+  link.href = slides[index].link;
+  info.textContent = slides[index].info;
+
+  // Apply per-image height fix
+  if (slides[index].maxHeight) {
+    img.style.maxHeight = slides[index].maxHeight;
+    img.style.objectFit = "cover";
+  } else {
+    img.style.maxHeight = "";
+    img.style.objectFit = "";
   }
+}
 
   update();
 
